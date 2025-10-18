@@ -7,63 +7,74 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="bgMusic" loop>
-  <source src="dv4d here with me.mp3" type="audio/mpeg">
-</audio>
+    <!-- Aurora Glow -->
+    <div class="aurora-bg"></div>
 
-    <!-- ...existing code... -->
+    <audio id="bgMusic" loop>
+        <source src="dv4d here with me.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="hearts"></div>
 
-     <!-- Tambahan: phone frame -->
+    <!-- Smartphone frame -->
     <div class="phone-frame">
         <div class="phone-screen">
 
-    <div class="container">
-        <h1 class="fade-in">Happy 3rd Anniversary, My Love 💖</h1>
-        <p id="typewriter" class="subtitle fade-in-delay"></p> <!-- added: typewriter text -->
-        <p class="subtitle fade-in-delay">Three years of laughter, memories, and endless love.</p>
+            <div class="container">
+                <h1 class="fade-in heartbeat">Happy 3rd Anniversary, My Love 💖</h1>
+                <p id="typewriter" class="subtitle fade-in-delay"></p>
+                <p class="subtitle fade-in-delay">Three years of laughter, memories, and endless love.</p>
 
-        <!-- added: music controls & love meter -->
-        <div class="controls">
-            <button id="playBtn">Play Music ▶️</button>
-            <label class="vol">Vol <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8"></label>
-            <label class="love-meter">Love: <span id="lovePct">50%</span>
-                <input id="loveRange" type="range" min="0" max="100" value="50">
-            </label>
+                <div class="controls">
+                    <button id="playBtn">Play Music ▶️</button>
+                    <label class="vol">Vol <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+                    <label class="love-meter">Love: <span id="lovePct">50%</span>
+                        <input id="loveRange" type="range" min="0" max="100" value="50">
+                    </label>
+                </div>
+
+                <section class="gallery fade-in">
+                    <h2>Our Memories 📸</h2>
+                    <div class="photos">
+                        <img src="img/photo1.jpg" alt="Memory 1">
+                        <img src="img/photo2.jpg" alt="Memory 2">
+                        <img src="img/photo3.jpg" alt="Memory 3">
+                        <img src="img/photo4.jpg" alt="Memory 4">
+                    </div>
+                </section>
+
+                <section class="letter fade-in-delay">
+                    <h2>💌 A Letter From My Heart</h2>
+                    <div class="letter-content">
+                        <p>Dear my love,</p>
+                        <p>Three years ago, you walked into my life — and everything became brighter.</p>
+                        <p>Every smile, every moment, every hug reminds me how lucky I am to have you.</p>
+                        <p>Thank you for being my best friend, my partner, and my forever.</p>
+                        <p>With all my heart, I love you. ❤️</p>
+                    </div>
+                    <button id="openLetter">Open the next part 💞</button>
+                </section>
+
+                <section id="hiddenPart" class="hidden fade-in">
+                    <h2>Forever Yours 💍</h2>
+                    <p>Through every challenge, joy, and adventure,  
+                    I promise to love you endlessly.  
+                    Here’s to our past, present, and forever together.</p>
+                </section>
+
+                <!-- 💌 Secret Message Reveal -->
+                <div class="secret-message hidden fade-in-delay" id="secretMsg">
+                    <h3>💖 Secret Message 💖</h3>
+                    <p>
+                        You are my favorite hello and my hardest goodbye.<br>
+                        Every moment with you is a dream I never want to end. 💞
+                    </p>
+                </div>
+
+            </div>
         </div>
-
-        <section class="gallery fade-in">
-            <h2>Our Memories 📸</h2>
-            <div class="photos">
-                <img src="img/photo1.jpg" alt="Memory 1">
-                <img src="img/photo2.jpg" alt="Memory 2">
-                <img src="img/photo3.jpg" alt="Memory 3">
-                <img src="img/photo4.jpg" alt="Memory 4">
-            </div>
-        </section>
-
-        <section class="letter fade-in-delay">
-            <h2>💌 A Letter From My Heart</h2>
-            <div class="letter-content">
-                <p>Dear my love,</p>
-                <p>Three years ago, you walked into my life — and everything became brighter.</p>
-                <p>Every smile, every moment, every hug reminds me how lucky I am to have you.</p>
-                <p>Thank you for being my best friend, my partner, and my forever.</p>
-                <p>With all my heart, I love you. ❤️</p>
-            </div>
-            <button id="openLetter">Open the next part 💞</button>
-        </section>
-
-        <section id="hiddenPart" class="hidden fade-in">
-            <h2>Forever Yours 💍</h2>
-            <p>Through every challenge, joy, and adventure,  
-            I promise to love you endlessly.  
-            Here’s to our past, present, and forever together.</p>
-        </section>
     </div>
 
-    <!-- added: confetti canvas + floating heart icon -->
     <canvas id="confettiCanvas"></canvas>
     <div id="floatingHeart">💓</div>
 

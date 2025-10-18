@@ -328,3 +328,27 @@ document.addEventListener('click', (e) => {
     document.body.appendChild(sparkle);
     setTimeout(() => sparkle.remove(), 3000);
 });
+
+// --- Secret message reveal ---
+const secretMsg = document.getElementById('secretMsg');
+if (openBtn && secretMsg) {
+    openBtn.addEventListener('click', () => {
+        setTimeout(() => {
+            secretMsg.classList.remove('hidden');
+            spawnConfetti(window.innerWidth / 2, window.innerHeight / 2, 60);
+        }, 2500);
+    });
+}
+
+// --- Sparkle Trail (every click adds glitter hearts) ---
+document.addEventListener('click', (e) => {
+    for (let i = 0; i < 5; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.textContent = '✨';
+        sparkle.style.left = (e.pageX + Math.random() * 40 - 20) + 'px';
+        sparkle.style.top = (e.pageY + Math.random() * 40 - 20) + 'px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 2500 + i * 200);
+    }
+});

@@ -275,3 +275,54 @@ body::before {
         border-width: 6px;
     }
 }
+
+/* --- Aurora Romantic Background --- */
+.aurora-bg {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255,192,203,0.5) 0%, transparent 70%),
+                radial-gradient(circle at 80% 70%, rgba(255,182,193,0.4) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(255,182,193,0.25) 0%, transparent 80%);
+    filter: blur(90px);
+    animation: auroraMove 20s ease-in-out infinite alternate;
+    z-index: 0;
+}
+@keyframes auroraMove {
+    0% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-5%, 5%) scale(1.1); }
+    100% { transform: translate(5%, -5%) scale(1); }
+}
+
+/* --- Heartbeat Animation --- */
+.heartbeat {
+    animation: fadeIn 2s forwards, heartbeat 1.8s infinite ease-in-out alternate;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); text-shadow: 0 0 10px rgba(255,0,90,0.4); }
+    100% { transform: scale(1.05); text-shadow: 0 0 20px rgba(255,0,120,0.7); }
+}
+
+/* --- Secret Message --- */
+.secret-message {
+    margin-top: 40px;
+    background: rgba(255, 240, 245, 0.2);
+    border: 2px dashed #ff80b5;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #ff2b6a;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+}
+
+/* --- Sparkle Trail --- */
+.sparkle {
+    position: fixed;
+    font-size: 20px;
+    animation: sparkleAnim 3s linear forwards;
+    pointer-events: none;
+    z-index: 10000;
+}
+@keyframes sparkleAnim {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-150px) scale(0.5); opacity: 0; }
+}
