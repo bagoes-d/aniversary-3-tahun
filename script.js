@@ -352,3 +352,14 @@ document.addEventListener('click', (e) => {
         setTimeout(() => sparkle.remove(), 2500 + i * 200);
     }
 });
+
+// --- Romantic Image Zoom Interaction ---
+const galleryPhotos = document.querySelector('.photos');
+document.querySelectorAll('.photos img').forEach(img => {
+    img.addEventListener('click', () => {
+        const isZoomed = img.classList.toggle('zoomed');
+        if (galleryPhotos) {
+            galleryPhotos.classList.toggle('zoom-active', isZoomed);
+        }
+    });
+});
