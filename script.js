@@ -170,7 +170,7 @@ if (vol && bg) {
 const lines = [
     "Kamu selalu di pikiranku.",
     "Setiap hari bersamamu adalah hadiah.",
-    "3 tahun lalu aku beruntung, sekarang & selamanya juga."
+    "3 tahun yang sangat beruntung yang aku lalui bersamamu, sekarang & selamanya."
 ];
 let li = 0, ci = 0;
 function typeLoop() {

@@ -446,3 +446,40 @@ h1.heartbeat-title {
         transform: scale(1.3);
     }
 }
+
+/* 💞 Couple Photos Section 💞 */
+.couple-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;              /* Jarak antar foto */
+    margin-bottom: 20px;
+    flex-wrap: wrap;        /* Biar otomatis turun kalau layar kecil */
+}
+
+.couple-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff80b5;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.couple-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 500px) {
+    .couple-photos {
+        flex-direction: row; /* tetap samping-sampingan tapi rapat */
+        gap: 15px;
+    }
+    .couple-img {
+        width: 90px;
+        height: 90px;
+    }
+}
